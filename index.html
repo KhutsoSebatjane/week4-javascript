@@ -62,10 +62,29 @@
             num1 + " x " + num2 + "=" + num1 * num2;
         }
       </script>
+      </div>
+
+      <!---Lesson 4--->
+    </div class="lesson">
+      <h3 id="heading4">Lesson 4: If/Else Decisions (Conditions)</h3>
+
+      <input type="password" id="password" placeholder="Try: 003">
+      <button onclick="lesson4()">Check Password</button>
+      <div class="result" id="result4">Enter Password and Click</div>
+
+      <script> 
+      function lesson4() {
+        var userPassword = document.getElementById("password").value;
+
+        if (userPassword == "003") {
+          document.getElementById("result4").innerHTML = "Correct password. You are logged in!"
+        } else {
+          document.getElementById("result4").innerHTML = "Incorrect password. Please try again."
+        }
+      }
+      </script>
     </div>
 
-    <div>
-      <script></script>
-    </div>
+    
   </body>
 </html>
