@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project: Login Form</title>
+    <link rel="stylesheet" href="styler.css" />
+  </head>
+  <body>
+    <!---Lesson 10 --->
+    <h2>Welcome!</h2>
+    <div>Enter username and password</div>
+    <br />
+    <form>
+      <label for="usernameInput">Username: </label>
+      <input type="text" id="usernameInput" />
+      <br />
+      <br />
+
+      <label for="passwordInput">Password: </label
+      ><input type="password" id="passwordInput" />
+      <br />
+      <br />
+
+      <button type="button" onclick="verifyUser()">Login</button>
+      <p class="output" id="message"></p>
+    </form>
+
+    <script>
+      function verifyUser() {
+        var username = document.getElementById("usernameInput").value;
+        var password = document.getElementById("passwordInput").value;
+        checkUserCreds(username, password);
+
+        //   After user inserts their credentials, they will appear on the users screen by using:
+        //      document.getElementById("message").innerHTML =
+        //       "Username Entered: " +
+        //       username +
+        //       "<br/>" +
+        //       "Password Entered: " +
+        //       password;
+      }
+
+      //   <p><em>Try username: AppAcademy, password: A003</em></p>
+
+      function checkUserCreds(username, password) {
+        var adminUsername = "AppAcademy";
+        var adminPassword = "A003";
+
+        if (username == adminUsername && password == adminPassword) {
+          document.getElementById("message").innerHTML =
+            "Correct details. Logging you in...";
+        } else {
+          document.getElementById("message").innerHTML =
+            "Username or password are incorrect. Please try again!";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -148,8 +148,6 @@
         }
 
       </script>
-
-
     </div>
 
     <!---Lesson 9--->
@@ -172,10 +170,61 @@
         }
 
       </script>
+    </div> 
 
+    <!--Lesson 10 & 11: Loginform.html-->
 
+    <!---Lesson 12--->
+    <div class="lesson">
+      <h2> Lesson 12: The Switch statement </h2>
+      <p><strong>Concept: </strong>Using switch statements for multiple conditions</p>
+      <label for="weather12">Select Waether</label>
+      <select id="weather12">
+        <option value="select">Select weather condition</option>
+        <option value="sunny">Sunny</option>
+        <option value="windy">Windy</option>
+        <option value="cloudy">Cloudy</option>
+        <option value="rainy">Rainy</option>
+        <option value="snowy">Snowy</option>
+      </select>
+
+        <button onclick="getWeatherAdvice()">Get Advice</button>
+        <div class="output" id="advice12">Select weather and click for advice</div>
+
+        <script>
+          function getWeatherAdvice() {
+            var weatherSelected = document.getElementById("weather12").value;
+            let advice;
+
+            switch (weatherSelected) {
+              case "sunny":
+                advice= "Wear your sunscreen and drink enough water!"
+                break;
+              case "windy":
+                advice= "Secure your loose items!"
+                break;
+              case "cloudy": 
+                advice= "Wear a light jacket"
+                break;
+              case "rainy": 
+                advice= "Wear a raincoat or have an umbrella!"
+                break;
+              case "snowy": 
+                advice= "Wear warm clothing!"
+                break;
+              default: 
+                advice ="Please select a weather condition from the list";
+
+            }
+
+            
+
+          }
+
+        </script>
     </div>
 
+    
   </body>
 
 </html>
